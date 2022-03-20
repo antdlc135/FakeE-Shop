@@ -8,7 +8,6 @@ import {
   concatMap,
   debounceTime,
   Observable,
-  of,
 } from 'rxjs';
 import { FetchCardService } from '../../../../shared/services/fetch-card.service';
 import { BeerNameType, BeerSizeType } from '../../../../models/models';
@@ -19,6 +18,8 @@ import { BeerNameType, BeerSizeType } from '../../../../models/models';
   styleUrls: ['./shop-select.component.scss'],
 })
 export class ShopSelectComponent implements OnInit {
+  @Output() private beerEmit = new EventEmitter<BehaviorSubject<Beer>>();
+
   private beer!: Beer;
   private beer$ = new BehaviorSubject<Beer>({
     id: 'Scegli da id!',
@@ -45,8 +46,6 @@ export class ShopSelectComponent implements OnInit {
     // ,{ validators: [this.formValidator] }
   );
 
-  beerID!: Observable<number>;
-  @Output() beerEmit = new EventEmitter<BehaviorSubject<Beer>>();
   constructor(
     private fb: FormBuilder,
     private fetchCardService: FetchCardService
@@ -90,8 +89,7 @@ export class ShopSelectComponent implements OnInit {
       )
       .subscribe((beer: Beer) => {
         this.beer = beer;
-        this.searchForm.patchValue({ name: beer.name });
-        this.searchForm.patchValue({ size: beer.size });
+        this.searchForm.patchValue({ name: beer.name, size: beer.size });
       });
   }
 
