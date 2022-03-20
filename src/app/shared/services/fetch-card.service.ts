@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
+
 import { Beer, BeerNameType, BeerSizeType } from '@app/models/models';
+
 import { from, Observable } from 'rxjs';
 import { filter, retry } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
@@ -17,7 +19,6 @@ export class FetchCardService {
   updateBeers() {
     this.httpClient
       .get<Beer[]>(this.beersEndpointUrl)
-      .pipe(retry(3))
       .subscribe((beers: Beer[]) => {
         this.beers$ = from(beers);
       });

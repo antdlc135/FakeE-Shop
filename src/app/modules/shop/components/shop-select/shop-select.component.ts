@@ -19,8 +19,7 @@ import { BeerNameType, BeerSizeType } from '../../../../models/models';
   styleUrls: ['./shop-select.component.scss'],
 })
 export class ShopSelectComponent implements OnInit {
-  private beers!: Beer[];
-  private beer!: Observable<Beer>;
+  private beer!: Beer;
   private beer$ = new BehaviorSubject<Beer>({
     id: 'Scegli da id!',
     size: 'da misura',
@@ -90,13 +89,13 @@ export class ShopSelectComponent implements OnInit {
         concatMap((id: number) => this.fetchCardService.getBeer(id))
       )
       .subscribe((beer: Beer) => {
-        this.beer = of(beer);
+        this.beer = beer;
         this.searchForm.patchValue({ name: beer.name });
         this.searchForm.patchValue({ size: beer.size });
       });
   }
 
   updateValue() {
-    this.beer.subscribe((beer) => this.beer$.next(beer));
+    this.beer$.next(this.beer);
   }
 }
