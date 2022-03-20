@@ -1,13 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Beer, BeerInfoArray, urlType } from '@app/models/models';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 @Component({
   selector: 'fakeshop-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss'],
 })
 export class CardComponent implements OnInit {
-  @Input() beer$!: BehaviorSubject<Beer>;
+  @Input() beer$!: Observable<Beer>;
 
   myBeer!: BeerInfoArray;
   urlBeer!: urlType[1];

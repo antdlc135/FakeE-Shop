@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Beer } from '@app/models/models';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Component({
   selector: 'fakeshop-root',
@@ -9,13 +9,13 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class AppComponent {
   title = 'FakeE-Shop';
-  beer!: BehaviorSubject<Beer>;
+  beer!: Observable<Beer>;
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  fetchById(beer: BehaviorSubject<Beer>): void {
+  fetchById(beer: Observable<Beer>): void {
     this.beer = beer;
   }
 }

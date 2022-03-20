@@ -18,7 +18,7 @@ import { BeerNameType, BeerSizeType } from '../../../../models/models';
   styleUrls: ['./shop-select.component.scss'],
 })
 export class ShopSelectComponent implements OnInit {
-  @Output() private beerEmit = new EventEmitter<BehaviorSubject<Beer>>();
+  @Output() beerEmit = new EventEmitter<Observable<Beer>>();
 
   private beer!: Beer;
   private beer$ = new BehaviorSubject<Beer>({
@@ -53,7 +53,7 @@ export class ShopSelectComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchCardService.updateBeers();
-    this.beerEmit.emit(this.beer$);
+    this.beerEmit.emit(this.beer$.asObservable());
 
     this.fromNameAndSize();
     this.fromId();
