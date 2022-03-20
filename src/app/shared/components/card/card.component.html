@@ -1,0 +1,21 @@
+<div class="p-5 px-5 d-flex flex-row justify-content-center card">
+  <div
+    class="d-flex p-4 info flex-column justify-content-around align-self-around"
+  >
+    <div *ngFor="let prop of myBeer" class="d-flex">
+      <div id="marker">
+        <strong>{{ prop[0] }}: </strong>
+      </div>
+      <div>
+        {{ prop[1] }}
+        <ng-container *ngIf="prop[0] === 'price'">&#8364;</ng-container>
+      </div>
+    </div>
+  </div>
+  <img
+    class="align-self-center"
+    src="assets/beers/{{ urlBeer ? urlBeer : '' }} "
+    width="150px"
+    alt=""
+  />
+</div>

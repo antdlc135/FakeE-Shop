@@ -1,0 +1,57 @@
+<form
+  [formGroup]="searchForm"
+  (ngSubmit)="updateValue()"
+  novalidate
+  class="d-flex flex-column p-0 gap-2"
+>
+  <div class="d-flex gap-2">
+    <div>
+      <select
+        id="name"
+        formControlName="name"
+        default="Beer Name"
+        name="name"
+        class="form-select"
+      >
+        <option value="" class="fw-bold" selected disabled hidden>
+          Beer Name
+        </option>
+        <option *ngFor="let name of names; let i = index" [ngValue]="name">
+          {{ name }}
+        </option>
+      </select>
+    </div>
+    <div>
+      <select id="size" formControlName="size" name="size" class="form-select">
+        <option value="" class="fw-bold" selected disabled hidden>
+          Beer Size
+        </option>
+        <option *ngFor="let size of sizes; let i = index" [value]="size">
+          {{ size }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <div class="">
+    <input
+      type="number"
+      placeholder="or type your beer ID"
+      class="form-control"
+      name="id"
+      id="id"
+      formControlName="id"
+      [value]="searchForm.value.id"
+      min="1"
+      max="20"
+    />
+  </div>
+
+  <button
+    type="submit"
+    [disabled]="!searchForm.valid"
+    class="btn btn-success flex-grow-1"
+  >
+    Search
+  </button>
+</form>

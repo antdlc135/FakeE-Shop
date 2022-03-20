@@ -1,0 +1,144 @@
+{
+  "beers": [
+    {
+      "id": 1,
+      "size": "medium",
+      "name": "Beck's",
+      "price": 3.5,
+      "url": "becks.png"
+    },
+    {
+      "id": 2,
+      "size": "medium",
+      "name": "Moretti",
+      "price": 3,
+      "url": "moretti.png"
+    },
+    {
+      "id": 3,
+      "size": "medium",
+      "name": "Menabrea",
+      "price": 4,
+      "url": "menabrea.png"
+    },
+    {
+      "id": 4,
+      "size": "medium",
+      "name": "Heineken",
+      "price": 3.5,
+      "url": "heineken.png"
+    },
+    {
+      "id": 5,
+      "size": "medium",
+      "name": "Ichnusa",
+      "price": 4.7,
+      "url": "ichnusa.png"
+    },
+    {
+      "id": 6,
+      "size": "medium",
+      "name": "Peroni",
+      "price": 3,
+      "url": "peroni.png"
+    },
+    {
+      "id": 7,
+      "size": "medium",
+      "name": "Leffe",
+      "price": 2,
+      "url": "leffe.png"
+    },
+    {
+      "id": 8,
+      "size": "medium",
+      "name": "Messina",
+      "price": 5,
+      "url": "messina.png"
+    },
+    {
+      "id": 9,
+      "size": "medium",
+      "name": "Tennent's",
+      "price": 4,
+      "url": "tennents.png"
+    },
+    {
+      "id": 10,
+      "size": "medium",
+      "name": "Lupulus",
+      "price": 3.5,
+      "url": "lupulus.png"
+    },
+    {
+      "id": 11,
+      "size": "small",
+      "name": "Beck's",
+      "price": 1.5,
+      "url": "becks.png"
+    },
+    {
+      "id": 12,
+      "size": "small",
+      "name": "Moretti",
+      "price": 1.8,
+      "url": "moretti.png"
+    },
+    {
+      "id": 13,
+      "size": "small",
+      "name": "Menabrea",
+      "price": 2,
+      "url": "menabrea.png"
+    },
+    {
+      "id": 14,
+      "size": "small",
+      "name": "Heineken",
+      "price": 1.8,
+      "url": "heineken.png"
+    },
+    {
+      "id": 15,
+      "size": "small",
+      "name": "Ichnusa",
+      "price": 3.7,
+      "url": "ichnusa.png"
+    },
+    {
+      "id": 16,
+      "size": "small",
+      "name": "Peroni",
+      "price": 1.5,
+      "url": "peroni.png"
+    },
+    {
+      "id": 17,
+      "size": "small",
+      "name": "Leffe",
+      "price": 1,
+      "url": "leffe.png"
+    },
+    {
+      "id": 18,
+      "size": "small",
+      "name": "Messina",
+      "price": 3,
+      "url": "messina.png"
+    },
+    {
+      "id": 19,
+      "size": "small",
+      "name": "Tennent's",
+      "price": 2,
+      "url": "tennents.png"
+    },
+    {
+      "id": 20,
+      "size": "small",
+      "name": "Lupulus",
+      "price": 1.9,
+      "url": "lupulus.png"
+    }
+  ]
+}
