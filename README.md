@@ -6,4 +6,4 @@ Setup:
 
 - after cloning run `npm i` then once inside the folder type `json-server db.json` finally run with `ng serve -o`.
 
-<img src="readme.gif"/>
+<img src="anim.gif"/>
